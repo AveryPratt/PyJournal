@@ -8,9 +8,9 @@ from pyramid.view import view_config
 HERE = os.path.dirname(__file__)
 
 ENTRIES = [
-    {"title": "LJ - Day 10", "creation_date": "Aug 19, 2016", "id": 10, "body": "Sample body text."},
-    {"title": "LJ - Day 11", "creation_date": "Aug 22, 2016", "id": 11, "body": "Sample body text."},
-    {"title": "LJ - Day 12", "creation_date": "Aug 23, 2016", "id": 12, "body": "Sample body text."},
+    {"title": "LJ - Day 10", "date": "Aug 19, 2016", "id": 10, "body": "Sample body text."},
+    {"title": "LJ - Day 11", "date": "Aug 22, 2016", "id": 11, "body": "Sample body text."},
+    {"title": "LJ - Day 12", "date": "Aug 23, 2016", "id": 12, "body": "Sample body text."},
 ]
 
 
@@ -25,7 +25,7 @@ def home(request):
 def detail(request):
     # imported_text = open(os.path.join(HERE, 'data/detail.html')).read()
     # return imported_text
-    return {}
+    return {"entry": ENTRIES[0]}
 
 
 @view_config(route_name='create', renderer='templates/create.jinja2')
@@ -39,7 +39,7 @@ def create(request):
 def update(request):
     # imported_text = open(os.path.join(HERE, 'data/update.html')).read()
     # return imported_text
-    return {}
+    return {"entry": ENTRIES[0]}
 
 
 # def includeme(config):

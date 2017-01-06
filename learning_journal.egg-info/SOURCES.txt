@@ -19,5 +19,4 @@ learning_journal/data/sample.html
 learning_journal/static/pyramid-16x16.png
 learning_journal/static/pyramid.png
 learning_journal/static/theme.css
-learning_journal/templates/home.html
 learning_journal/templates/mytemplate.pt
